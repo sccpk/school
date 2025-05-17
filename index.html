@@ -1,87 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horário Escolar</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horário Escolar</title>
+  <style>
+    :root {
+      --border-color: #ccc;
+      --header-bg: #f4f4f4;
+      --cell-padding: 0.75rem;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-family);
+      margin: 1rem;
+      background-color: #fafafa;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .tabela-horario {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+
+    .tabela-horario th,
+    .tabela-horario td {
+      border: 1px solid var(--border-color);
+      padding: var(--cell-padding);
+      text-align: center;
+      min-width: 120px;
+    }
+
+    .tabela-horario th {
+      background-color: var(--header-bg);
+    }
+
+    @media (max-width: 768px) {
+      .tabela-horario {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .tabela-horario th,
+      .tabela-horario td {
+        padding: 0.5rem;
+        min-width: 90px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <main>
     <h2>Horário Escolar</h2>
-    <table>
-        <tr>
+    <div style="overflow-x: auto;">
+      <table class="tabela-horario">
+        <thead>
+          <tr>
             <th>Horário</th>
-            <th>Segunda-feira</th>
-            <th>Terça-feira</th>
-            <th>Quarta-feira</th>
-            <th>Quinta-feira</th>
-            <th>Sexta-feira</th>
-        </tr>
-        <tr>
+            <th>Segunda</th>
+            <th>Terça</th>
+            <th>Quarta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td>1º</td>
             <td>Projeto de Vida</td>
             <td>Artes</td>
             <td>História</td>
             <td>Português</td>
             <td>Biologia</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>2º</td>
             <td>Matemática</td>
             <td>Geografia</td>
             <td>Português</td>
             <td>Física</td>
             <td>English</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>3º</td>
             <td>História</td>
             <td>Biologia</td>
             <td>Matemática</td>
             <td>Projeto de Vida</td>
             <td>Física</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>4º</td>
             <td>Português</td>
             <td>Português</td>
             <td>Tecnologia e Informação</td>
             <td>English</td>
             <td>Geografia</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>5º</td>
             <td>Filosofia</td>
             <td>Educação Física</td>
             <td>Química</td>
             <td>Tecnologia e Informação</td>
             <td>Química</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>6º</td>
             <td>Identidade Cultural</td>
             <td>Matemática</td>
             <td>Identidade Cultural</td>
             <td>Matemática</td>
             <td>Sociologia</td>
-        </tr>
-    </table>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
 </body>
 </html>
